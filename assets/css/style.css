@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;1,700&display=swap');
+body {
+background-color: #05311fcb;;
+
+}
+
+/* -----------------------------------Fonts & Colours--*/
+
+* {
+  font-size: 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
+
+ 
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 span {
+  padding: 1rem;
+  background: #f2f2f2;
+  font-size: 2rem;
+}
+
+/*----------------Navbar-------------- */
+
+#logo {
+  width: 70px;
+  height: 70px;
+}
+.nav_quiz {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgb(142, 141, 141);
+  margin-bottom: 5rem;
+  color: #05311fcb;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_quiz i {
+  font-size: 30px;
+  color: #05311fcb;
+  
+
+}
+button i:hover {
+  transition: 1s;
+  color: #05311fcb;
+}
+
+/*------------ Game HUD & settings------------- */
+
+
+.center_box{
+
+
+  margin-top: 150px;
+  background-color: #021e0d;
+  box-shadow: 0 0 10px rgb(48, 48, 48);
+  color: #fff;
+
+}
+.qz-hud {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+
+  background-clip: content-box;
+  display: flex;
+  justify-content: space-between;
+
+}
+.qz-hud h2 {
+
+  margin-top: 1rem;
+  padding-left: 0;
+  font-size: 18px;
+}
+select {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0px;
+  margin-bottom: 10px;
+  width: 180px;
+  padding: 5px 0px 5px 10px;
+  border: 1px solid #05311fcb;
+
+  height: 35px;
+
+  
+}
+
+/*----------Game live score & progressbar -----*/
+
+#start,
+#start:active {
+  border: 2px solid #05311fcb;
+  font-size: 2rem;
+  width: 18rem;
+  height: 6rem;
+  background-color: #fff;
+  color: #05311fcb;
+  border: none;
+}
+#start:hover,
+#start:focus {
+  animation: pulse 2s;
+  background-color: #05311fcb;
+  color: #f2f2f2;
+  box-shadow: 0 0 10px rgb(142, 141, 141);
+  
+
+}
+#wrapper{
+  background-color: #ffff;
+  border-radius: 20px;
+  min-height: 600px;
+  padding: 0;
+
+}
+
+.progress-wraper {
+  max-width: 100%;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  height: 3rem;
+  border: 1px solid #05311fcb;
+  box-shadow: 0 0 10px rgb(142, 141, 141);
+}
+.qz-progress-bar {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 0%;
+  background-color: #05311fcb
+}
+.hScore {
+  display: inline-block;
+}
+#score {
+  width: 200px;
+  height: 200px;
+  line-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* background-color: #fff; */
+  padding: 0.5rem;
+  border: 2px solid #05311fcb
+}
+#currentScore {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#userName {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+#highScore {
+  font-size: 2.4rem;
+}
+/*------------------ Game Questions & Answers -----------*/
+.answers-container {
+  display: flex;
+  padding-left: 0;
+  margin: 0 1rem 0 1rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 0.2rem solid #05311fcb;
+  background-color: #fff;
+}
+
+.answers-container:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  transform: translateY(-0.25em);
+}
+
+.answer-choice {
+  padding: 1rem 0rem 1rem 2rem;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.answer-prefix {
+  display: flex;
+  border-radius: 1.2rem;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #f2f2f2;
+  border-right: 0.2rem solid #05311fcb;
+}
+#game {
+  padding: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#question {
+  /* background-color: #05311fcb; */
+  color: #f2f2f2;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #000;
+
+}
+.questionAns{
+
+  text-align: center;
+ 
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+i,
+a {
+  color: #05311fcb;
+  font-size: 3rem;
+}
+
+/*-------------------Modals-------------------*/
+
+.qz-Modal--bg {
+  background-color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#playerModal label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+#user {
+  font-family: "Exo 2", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #05311fcb;
+}
+
+.qz-Modal--content {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.qz-Modal--content p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+#underline {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+#submitName {
+  font-size: 2rem;
+  border: 1px solid #fff;
+  background-color: #011526;
+}
+
+#submitName:hover {
+  transition: 0.5s;
+  color: #fff;
+  border: 1px solid #05311fcb;
+}
+
+button.close span {
+  color: #141A40;
+  font-weight: 800;
+  text-shadow: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+}
+
+button.close {
+  opacity: 1;
+  padding-top: 0.5rem;
+}
+
+button.close span:hover {
+  transition: 0.5s;
+  color: #8b0017;
+}
+button.close:focus {
+  outline: none;
+}
+
+
+/*------------ add and remove classes---------- */
+
+.hideBtn {
+  visibility: hidden;
+}
+
+.correct {
+  background-color: #47bd11;
+}
+
+.incorrect {
+  background-color: #8b0017;
+}
+.display {
+  display: none;
+}
+.hide {
+  visibility: hidden;
+}
+
+/*------------------ Media Query ----------------*/
+@media screen and (max-width: 350px) {
+  .col-12 {
+    padding: 0;
+  }
+  .progress-wraper {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  #game {
+    padding: 0;
+    width: 100%;
+  }
+  #question {
+    margin: 1rem 0 1rem 0;
+    font-size: 2rem;
+  }
+  #qz-footer {
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 351px) {
+  .title span {
+    font-size: 3rem;
+    background-clip: content-box;
+  }
+}
